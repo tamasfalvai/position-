@@ -80,3 +80,24 @@ article.card{
     opacity: .7;
     z-index: -1;
 }
+
+
+
+/* 700px alatt ez érvényesül ami itt van ebbe benne      (cssben css) */
+/*Media querry-k töréspontok*/
+@media(max-width: 700px){
+    section.cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #fisrt_card, article.card{
+        background: #df4e4e;
+    }
+}
+
+@media(max-width: 600px){
+    h2{
+        text-transform: uppercase;    
+    }
+}
