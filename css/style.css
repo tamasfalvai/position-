@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    background-color: rgb(164, 239, 244);
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    
+}
+header h1{
+    padding: 1.5rem;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(200, 40,30, .5);
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10vw;
+    flex-wrap: wrap;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: .3rem .5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: rgba(101, 21, 16, 0.5);
+}
+section.cards{
+    display: flex;
+    row-gap: 2rem;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+article.card{
+    width: 20rem;
+    padding: 1rem;
+    background-color: rgb(238, 215, 136);
+}
+.card:first-child{
+    background-color: red;
+    position: relative;
+}
+.card:first-child button{
+    background-color: rgba(100,100,100,.1);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: scale .1s;
+}
+.card:first-child button:active{
+    scale: .8;
+    background-color: rgba(16, 60, 101, 0.5);
+}
+/*Az abszolút elem valamelyik szülője legyen relatív!!!*/
+.card:nth-child(2){
+    position: relative; /*Az abszolút elem a relatívhoz igazodik*/
+    z-index: -1;
+}
+.card:nth-child(2) #circle{
+    border-radius: 50%;
+    width: 25%;
+    position: absolute;
+    top:.3rem;
+    right: .3rem;
+    opacity: .7;
+    z-index: -1;
+}
